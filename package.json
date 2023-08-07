@@ -1,0 +1,14 @@
+{
+	"name": "fila-node",
+	"author": "Paul Gordon",
+	"description": "Node.js backend for Fila",
+	"version": "1.0.0",
+	"main": "fila-node.js",
+	"scripts": {
+		"bundle": "tsc -p tsconfig.release.json && terser ./+build/fila-node.debug.js > ./+build/fila-node.min.js"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^18.11.9"
+	}
+}
