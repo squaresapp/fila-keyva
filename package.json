@@ -35,5 +35,8 @@
 	"dependencies": {
 		"fila-core": "^1.0.1",
 		"keyvajs": "^1.0.1"
+	},
+	"devDependencies": {
+		"moduless": "^3.2.5"
 	}
 }
