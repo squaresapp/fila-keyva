@@ -21,6 +21,7 @@ namespace Cover
 		await dir.delete();
 		debugger;
 	}
+	
+	declare const module: any;
+	typeof module === "object" && Object.assign(module.exports, { Cover });
 }
-
-typeof module === "object" && Object.assign(module.exports, { Cover });

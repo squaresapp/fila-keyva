@@ -3,9 +3,37 @@
 	"author": "Paul Gordon",
 	"description": "Keyva.js backend for Fila",
 	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/scrollapp/fila-keyva"
+	},
+	"bugs": {
+		"url": "https://github.com/scrollapp/fila-keyva/issues"
+	},
 	"main": "fila-keyva.js",
-	"license": "MIT",
+	"browser": "fila-keyva.js",
+	"module": "fila-keyva.esm.js",
+	"types": "fila-keyva.d.ts",
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"LICENSE.txt",
+		"readme.md",
+		"fila-keyva.js",
+		"fila-keyva.min.js",
+		"fila-keyva.d.ts",
+		"fila-keyva.d.ts.map",
+		"fila-keyva.esm.js"
+	],
 	"scripts": {
-		"bundle": "tsc -p tsconfig.release.json && terser ./+build/fila-keyva.debug.js > ./+build/fila-keyva.min.js"
+		"test": "exit 0",
+		"esm": "sed 's/\\/\\/+ //' ./+build/fila-keyva.js > ./+build/fila-keyva.esm.js",
+		"bundle": "tsc -p tsconfig.release.json && terser ./+build/fila-keyva.debug.js > ./+build/fila-keyva.min.js && npm run esm",
+		"release": "npm run bundle && cd ./+build && cp ../package.json ./package.json && np"
+	},
+	"dependencies": {
+		"fila-core": "^1.0.1",
+		"keyvajs": "^1.0.1"
 	}
 }
