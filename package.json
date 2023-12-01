@@ -2,7 +2,7 @@
 	"name": "fila-keyva",
 	"author": "Paul Gordon",
 	"description": "Keyva.js backend for Fila",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/scrollapp/fila-keyva"
